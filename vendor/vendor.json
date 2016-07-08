@@ -1,0 +1,13 @@
+{
+	"comment": "",
+	"ignore": "test",
+	"package": [
+		{
+			"checksumSHA1": "Bn333k9lTndxU3D6n/G5c+GMcYY=",
+			"path": "github.com/stretchr/testify/assert",
+			"revision": "bcd9e3389dd03b0b668d11f4d462a6af6c2dfd60",
+			"revisionTime": "2016-04-13T09:04:24Z"
+		}
+	],
+	"rootPath": "github.com/AmuzaTkts/jsonapi-errors"
+}
