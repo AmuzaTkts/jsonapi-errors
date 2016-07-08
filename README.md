@@ -1,4 +1,4 @@
-# jsonapi-errors [![GoDoc](https://godoc.org/github.com/golang/gddo?status.svg)](http://godoc.org/github.com/AmuzaTkts/jsonapi-errors)
+# jsonapi-errors [![GoDoc](https://godoc.org/github.com/golang/gddo?status.svg)](http://godoc.org/github.com/AmuzaTkts/jsonapi-errors) [![Build Status](https://travis-ci.org/AmuzaTkts/jsonapi-errors.svg?branch=master)](https://travis-ci.org/AmuzaTkts/jsonapi-errors) [![Coverage Status](https://coveralls.io/repos/github/AmuzaTkts/jsonapi-errors/badge.svg?branch=master)](https://coveralls.io/github/AmuzaTkts/jsonapi-errors?branch=master)
 
 This package provides error bindings based on the [JSON API](http://jsonapi.org/format/#errors) reference.
 
