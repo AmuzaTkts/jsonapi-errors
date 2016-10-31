@@ -27,11 +27,11 @@ The above code will return the following JSON structure:
 ```
 
 ## Multiple errors
-There's also the possibility to add multiple errors with different status codes.
-In this case, the lib will check for the range of the errors and will return the
-lower bound.
+This package adds the possibility to add multiple errors with different status
+codes. The package will check for the range of the errors and will set the main
+status key to the lower bound of the error class.
 
-Eg: If I add an error `501` and `502`, the lib will return the error `500`.
+Eg: If add an error `501` and `502`, the main status key will be `500`.
 
 ```Go
 bag := NewBag()
@@ -55,5 +55,32 @@ Will return:
         }
     ],
     "status": "500"
+}
+```
+
+It's also possible to have errors of different classes(`400` and `500` for example),
+in this case the package will silently return `400` as the main status.
+
+```Go
+bag := NewBag()
+bag.AddError(401, "Client Error 1")
+bag.AddError(502, "Server Error 1")
+
+jsonStr, _ := json.Marshal(bag)
+```
+
+```JSON
+{
+    "errors": [
+        {
+            "detail": "Client Error 1",
+            "status": "401"
+        },
+        {
+            "detail": "Server Error 1",
+            "status": "502"
+        }
+    ],
+    "status": "400"
 }
 ```
